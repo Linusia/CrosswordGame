@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Krzyżówka - Gra Słowna";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Witaj w Krzyżówce!</h1>
+    <p>Połącz litery, aby tworzyć słowa. Wykorzystane litery znikają z puli.</p>
+
+    <div class="mt-5">
+        <a href="@Url.Action("Game", "Home")" class="btn btn-primary btn-lg" style="font-size: 2rem; padding: 20px 40px;">
+            GRAJ
+        </a>
+    </div>
+
+    <div class="mt-4">
+        <h3>Wybierz poziom trudności:</h3>
+        <div class="btn-group mt-2" role="group">
+            <a href="@Url.Action("SelectLevel", "Home", new { levelId = 1 })" class="btn btn-success">Łatwy</a>
+            <a href="@Url.Action("SelectLevel", "Home", new { levelId = 2 })" class="btn btn-warning">Średni</a>
+            <a href="@Url.Action("SelectLevel", "Home", new { levelId = 3 })" class="btn btn-danger">Trudny</a>
+        </div>
+    </div>
+</div>

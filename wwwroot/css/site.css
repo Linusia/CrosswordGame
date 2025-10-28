@@ -1,0 +1,38 @@
+/* Dodatkowe style dla gry krzy¿ówki */
+.letter-badge {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+    .letter-badge:hover {
+        transform: scale(1.1);
+    }
+
+#found-words {
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.btn-lg {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+    .btn-lg:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+.alert {
+    border-radius: 10px;
+}
