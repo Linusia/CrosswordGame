@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Gry</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #e8bdf8;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .menu-container {
+            margin-top: 40px;
+        }
+
+        .title {
+            font-size: 90px;
+            color: #ff7878;
+            background: #7d58ff;
+            padding: 20px 80px;
+            width: fit-content;
+            margin: 0 auto 60px auto;
+            border-radius: 80px;
+            box-shadow: 0 0 40px rgba(125, 88, 255, 0.9);
+            font-weight: bold;
+            letter-spacing: 8px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .btn {
+            display: block;
+            margin: 30px auto;
+            font-size: 40px;
+            padding: 20px 60px;
+            color: #ff7878;
+            background: #7d58ff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            letter-spacing: 6px;
+            font-weight: bold;
+            box-shadow: 0 0 25px rgba(125, 88, 255, 0.7);
+            transition: 0.3s ease-in-out;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 0 40px rgba(255, 120, 120, 0.9);
+            background: #955eff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #7d58ff;
+            padding: 15px 0;
+            font-size: 26px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            color: #ff7878;
+            font-weight: bold;
+            letter-spacing: 3px;
+            animation: fadeIn 1.4s ease-out;
+        }
+
+        .footer-link {
+            text-decoration: none;
+            color: #ff7878;
+            font-weight: bold;
+            letter-spacing: 3px;
+            transition: 0.2s;
+        }
+
+        .footer-link:hover {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h1 class="title">MENU</h1>
+
+
+        <button class="btn" onclick="location.href='@Url.Action("Kontynuuj", "Game")'">KONTYNUUJ</button>
+        <button class="btn" onclick="location.href='/Levels.html'">LEVELE</button>
+        <button class="btn" onclick="location.href='@Url.Action("Index", "Home")'">WYJåCIE</button>
+    </div>
+
+    <footer>
+        <a href="#" class="footer-link">O MNIE</a>
+        <span>|</span>
+        <a href="#" class="footer-link">èR”D£A</a>
+    </footer>
+
+</body>
+</html>
