@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Levels";
+    int page = Convert.ToInt32(ViewContext.RouteData.Values["page"] ?? 1);
+    int start = (page - 1) * 15 + 1;
+}
+
+<div class="levels-container">
+
+    <!-- Domek -->
+    <a href="/Home/Index" class="home-btn">🏠</a>
+
+    <!-- Siatka poziomów -->
+    <div class="grid">
+        @for (int i = start; i < start + 15; i++)
+        {
+        <a class="level-btn" href="/Level/Play/@i">@i</a>
+        }
+    </div>
+
+    <!-- Strzałka -->
+    <a href="/Levels/@(page + 1)" class="arrow-btn">➡</a>
+</div>
+
+
+<style>
+    body {
+        background: #e6a8e6;
+        font-family: Arial;
+    }
+
+    .levels-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 120px);
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .level-btn {
+        background: #8a48ff;
+        color: white;
+        font-size: 40px;
+        padding: 25px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+        .level-btn:hover {
+            background: #a162ff;
+            transform: scale(1.1);
+        }
+
+    .home-btn {
+        font-size: 60px;
+        text-decoration: none;
+        position: fixed;
+        bottom: 40px;
+        left: 40px;
+        color: #6b28ff;
+        transition: 0.2s;
+    }
+
+        .home-btn:hover {
+            transform: scale(1.2);
+        }
+
+    .arrow-btn {
+        font-size: 60px;
+        text-decoration: none;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        color: #6b28ff;
+        transition: 0.2s;
+    }
+
+        .arrow-btn:hover {
+            transform: scale(1.2);
+        }
+</style>
